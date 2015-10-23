@@ -1,12 +1,12 @@
- # Conway’s Game of Life Exercise
+# Conway’s Game of Life Exercise
 
- ## Goal
+## Goal
 
- The goal of this exercise is to calculate the next generation of Conway’s game of life 
+> The goal of this exercise is to calculate the next generation of Conway’s game of life 
  given any initial state. Take a look at the following for some background on 
  Conway’s game of life:
 
- ## Rules 
+## Rules 
 
  1. Any live cell with fewer than two live neighbors dies, as if caused by underN
  population.
