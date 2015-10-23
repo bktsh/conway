@@ -6,7 +6,7 @@
  given any initial state. Take a look at the following for some background on 
  Conway’s game of life:
 
- ## Rules
+ ## Rules 
 
  1. Any live cell with fewer than two live neighbors dies, as if caused by underN
  population.
