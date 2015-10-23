@@ -16,7 +16,7 @@ public class GameOfLife {
      * @param state
      * @return
      */
-    public int[][] getNextState(final int[][] state) {
+    public int[][] getNextState(int[][] state) {
         int rows = state.length;
         int cols = state[0].length;
         int[][] result = new int[rows][cols];
@@ -37,7 +37,7 @@ public class GameOfLife {
      * @param state
      * @return
      */
-    int getCellUpdatedStatus(int row, int col,final int[][] state) {
+    int getCellUpdatedStatus(int row, int col, int[][] state) {
         int neighbours = getNumberOfLiveNeihbourCells(row, col, state);
         if (neighbours < 2 && state[row][col] == 1) {
             return DEAD;
@@ -88,7 +88,7 @@ public class GameOfLife {
      *
      * @param State
      */
-    public void pritState(final int[][] State) {
+    public void pritState( int[][] State) {
         for (int i = 0; i < State.length; i++) {
             for (int j = 0; j < State[0].length; j++) {
                 System.out.print(State[i][j] == 0 ? DEAD_CELL_SYMBOL : LIVE_CELL_SYMBOL);
