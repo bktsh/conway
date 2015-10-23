@@ -1,12 +1,12 @@
- #Conway’s Game of Life Exercise
+ # Conway’s Game of Life Exercise
 
- ##Goal
+ ## Goal
 
  The goal of this exercise is to calculate the next generation of Conway’s game of life 
  given any initial state. Take a look at the following for some background on 
  Conway’s game of life:
 
- ##Rules 
+ ## Rules 
 
  1. Any live cell with fewer than two live neighbors dies, as if caused by underN
  population.
@@ -17,7 +17,7 @@
  diagonally adjacent. Most cells will have eight neighbors. Cells placed on the 
  edge of the grid will have fewer.
 
- ##Implementation
+ ## Implementation
 
  This Program uses the simplest implementation of the game using command line to print
  output. It'll read the input file from command line(passed through command line arguments),
