@@ -1,4 +1,4 @@
- #                            Conway’s)Game)of)Life)Exercise
+ # Conway’s Game of Life Exercise
 
  ## Goal
 
