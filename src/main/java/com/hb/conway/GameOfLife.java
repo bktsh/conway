@@ -39,13 +39,13 @@ public class GameOfLife {
      */
     int getCellUpdatedStatus(int row, int col, int[][] state) {
         int neighbours = getNumberOfLiveNeihbourCells(row, col, state);
-        if (neighbours < 2 && state[row][col] == 1) {
+        if (neighbours < 2 && state[row][col] == ALIVE ) {
             return DEAD;
-        }else if (neighbours > 3 && state[row][col] == 1) {
+        }else if (neighbours > 3 && state[row][col] == ALIVE ) {
             return DEAD;
-        }else if ((neighbours == 2 || neighbours == 3) && state[row][col] == 1) {
+        }else if ((neighbours == 2 || neighbours == 3) && state[row][col] == ALIVE ) {
             return ALIVE;
-        }else if (neighbours == 3 && state[row][col] == 0) {
+        }else if (neighbours == 3 && state[row][col] == DEAD) {
             return ALIVE;
         }
         return DEAD;
@@ -64,7 +64,7 @@ public class GameOfLife {
         for (int r = row - 1; r <= row + 1; r++) {
             for (int c = col - 1; c <= col + 1; c++) {
                 if( r== row && c == col )continue;//skip the cell itself and just count surrounding cells
-                if (indexInRange(r, c, state) && state[r][c] == 1) {//neighbour is alive
+                if (indexInRange(r, c, state) && state[r][c] == ALIVE) {//neighbour is alive
                     count++;
                 }
             }
@@ -91,7 +91,7 @@ public class GameOfLife {
     public void pritState( int[][] State) {
         for (int i = 0; i < State.length; i++) {
             for (int j = 0; j < State[0].length; j++) {
-                System.out.print(State[i][j] == 0 ? DEAD_CELL_SYMBOL : LIVE_CELL_SYMBOL);
+                System.out.print(State[i][j] == DEAD ? DEAD_CELL_SYMBOL : LIVE_CELL_SYMBOL);
             }
             System.out.println();
         }
