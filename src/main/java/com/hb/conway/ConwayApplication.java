@@ -13,7 +13,9 @@ public class ConwayApplication {
     private final File defaultInputSource = new File(getClass().getClassLoader().getResource("input.txt").getFile());
 
     public static void main(String[] args) {
-        System.out.println("args => "+ args[0]);
+        if (args.length > 0){
+            System.out.println("args => " + args[0]);
+         }
         printGuidelines();
         ConwayApplication conwayApplication = new ConwayApplication();
         int[][] initial = conwayApplication.loadInput(args);
